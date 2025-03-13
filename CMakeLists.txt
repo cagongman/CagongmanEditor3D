@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(CagongmanEditor3D LANGUAGES CXX)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets OpenGL)
 
 qt_standard_project_setup()
 
@@ -17,6 +17,7 @@ target_link_libraries(CagongmanEditor3D
     PRIVATE
         Qt::Core
         Qt::Widgets
+        Qt6::OpenGL
 )
 
 include(GNUInstallDirs)
